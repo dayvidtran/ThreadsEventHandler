@@ -43,12 +43,17 @@ public class EventListenerTest {
         }
 
         @Override
+        public void handle(String messageToReplyWith, EventListener eventListener) {
+
+        }
+
+        @Override
         public void push(String message) {
             itemWasPushed = true;
         }
 
         @Override
-        public boolean has(String message) {
+        public Boolean has(String message) {
             return true;
         }
 

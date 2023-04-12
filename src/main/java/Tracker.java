@@ -1,3 +1,5 @@
+//import jdk.internal.org.jline.terminal.impl.LineDisciplineTerminal;
+
 import java.util.Map;
 
 public interface Tracker {
@@ -7,4 +9,8 @@ public interface Tracker {
     Boolean has(String message);
 
     void handle(String message, EventHandler e);
+
+    Map<String, Integer> tracker();
+
+    void handle(String messageToReplyWith, EventListener eventListener);
 }
